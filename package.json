@@ -1,0 +1,19 @@
+{
+  "name": "do-spaces-client",
+  "version": "1.0.0",
+  "description": "A client for interfacing with DigitalOcean Spaces",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tentkeep/do-spaces-client.git"
+  },
+  "author": "Tentkeep",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tentkeep/do-spaces-client/issues"
+  },
+  "homepage": "https://github.com/tentkeep/do-spaces-client#readme"
+}
