@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/tentkeep/do-spaces-client/issues"
   },
-  "homepage": "https://github.com/tentkeep/do-spaces-client#readme"
+  "homepage": "https://github.com/tentkeep/do-spaces-client#readme",
+  "dependencies": {
+    "aws-sdk": "^2.744.0"
+  },
+  "devDependencies": {
+    "standard": "^14.3.4"
+  }
 }
