@@ -27,6 +27,7 @@ const signedRequest = (key, contentType, acl) => {
   return {
     url,
     options: !contentType ? undefined : {
+      method: 'put',
       headers: {
         'x-amz-acl': params.ACL,
         'Content-Type': contentType
