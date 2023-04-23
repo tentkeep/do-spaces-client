@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A client for interfacing with DigitalOcean Spaces",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "test": "test"
   },
@@ -16,10 +17,13 @@
     "url": "https://github.com/tentkeep/do-spaces-client/issues"
   },
   "homepage": "https://github.com/tentkeep/do-spaces-client#readme",
-  "dependencies": {
-    "aws-sdk": "^2.744.0"
-  },
   "devDependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/node": "^18.16.0",
     "standard": "^14.3.4"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.317.0",
+    "@aws-sdk/s3-request-presigner": "^3.317.0"
   }
 }
