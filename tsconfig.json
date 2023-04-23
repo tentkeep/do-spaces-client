@@ -1,22 +1,25 @@
 {
-  "include": ["src/**/*"],
+  "include": ["./**/*.ts", "phantomjs"],
   "exclude": [
-    "node_modules",
-    "test/**/*"
+    "node_modules", "tests"
   ],
   "compilerOptions": {
     "lib": [
       "ES2020",
     ], // specifies which default set of type definitions to use ("DOM", "ES6", etc)
+    "skipLibCheck": true,
+    "declaration": true,
     "outDir": "dist", // .js (as well as .d.ts, .js.map, etc.) files will be emitted into this directory.,
     "removeComments": true, // Strips all comments from TypeScript files when converting into JavaScript- you rarely read compiled code so this saves space
-    "target": "ES2020", // Target environment. Most modern browsers support ES6, but you may want to set it to newer or older. (defaults to ES3)
-    "module": "Node16",
+    "target": "ES2022", // Target environment. Most modern browsers support ES6, but you may want to set it to newer or older. (defaults to ES3)
+    "module": "NodeNext",
 
     // Module resolution
-    "baseUrl": ".", // Lets you set a base directory to resolve non-absolute module names.
+    "baseUrl": "./", // Lets you set a base directory to resolve non-absolute module names.
     "esModuleInterop": true, // fixes some issues TS originally had with the ES6 spec where TypeScript treats CommonJS/AMD/UMD modules similar to ES6 module
-    "moduleResolution": "Node16", // Pretty much always node for modern JS. Other option is "classic"
+    "moduleResolution": "NodeNext", // Pretty much always node for modern JS. Other option is "classic"
+    "paths": {}, // A series of entries which re-map imports to lookup locations relative to the baseUrl
+
     // Source Map
     "sourceMap": true, // enables the use of source maps for debuggers and error reporting etc
     "sourceRoot": "/", // Specify the location where a debugger should locate TypeScript files instead of relative source locations.
@@ -24,10 +27,9 @@
     // Strict Checks
     "alwaysStrict": true, // Ensures that your files are parsed in the ECMAScript strict mode, and emit “use strict” for each source file.
     "allowUnreachableCode": false, // pick up dead code paths
-    // "allowJs": true,
+    "allowJs": true,
     "noImplicitAny": false, // In some cases where no type annotations are present, TypeScript will fall back to a type of any for a variable when it cannot infer the type.
     "strictNullChecks": true, // When strictNullChecks is true, null and undefined have their own distinct types and you’ll get a type error if you try to use them where a concrete value is expected.
-    "resolveJsonModule": true,
 
     // Linter Checks
     "noImplicitReturns": true,

@@ -11,7 +11,7 @@ const s3Client = new S3({
   },
 })
 
-const signedGetRequest = async (key) => {
+export const signedGetRequest = async (key) => {
   const command = new GetObjectCommand({
     Bucket: process.env.DIGITALOCEAN_SPACE_NAME,
     Key: key,
@@ -22,7 +22,7 @@ const signedGetRequest = async (key) => {
   return { url }
 }
 
-const signedPutRequest = async (key, contentType, acl?) => {
+export const signedPutRequest = async (key, contentType, acl?) => {
   const command = new PutObjectCommand({
     Bucket: process.env.DIGITALOCEAN_SPACE_NAME,
     Key: key,
@@ -44,7 +44,7 @@ const signedPutRequest = async (key, contentType, acl?) => {
   }
 }
 
-module.exports = {
+export default {
   signedGetRequest,
   signedPutRequest,
 }
